@@ -13,6 +13,7 @@ public class Chat implements ChatRoom {
 
 	@Override
 	public void sendMessage(String message, User user) {
+		
 		for(User chatUser: this.users) {
 			if(chatUser != user) {
 				chatUser.receive(message);
